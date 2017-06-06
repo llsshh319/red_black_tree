@@ -248,6 +248,7 @@ bool deleteNode(RBT* rbt, int val)
 			temp->color = node->color;
 			parent = temp;
 		}
+		if(child == NULL)
 		if (child == NULL)
 			child = node;
 		if (nodecolor == BLACK)
