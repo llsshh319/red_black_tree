@@ -1,7 +1,3 @@
-//  2015147584 Lee,Sang Hyun 
-//computer sciencs 
-
-
 #include "stdafx.h"
 #include <stdlib.h>
 #include <stdio.h>
@@ -252,7 +248,7 @@ bool deleteNode(RBT* rbt, int val)
 			temp->color = node->color;
 			parent = temp;
 		}
-		if(child == NULL)
+		if (child == NULL)
 			child = node;
 		if (nodecolor == BLACK)
 		{
@@ -310,7 +306,7 @@ bool deleteNode(RBT* rbt, int val)
 					{
 						if (sib->left == NULL || sib->left->color == BLACK)
 						{
-							if(sib->right != NULL)
+							if (sib->right != NULL)
 								sib->right->color = BLACK;
 							sib->color = RED;
 							rotateright(rbt, sib);
@@ -353,7 +349,7 @@ void printinorder(Node* node)
 	{
 		if (node->left != NULL)
 			printinorder(node->left);
-		printf("%d %d\n", node->val, node->color);
+		printf("%d\n", node->val);
 		if (node->right != NULL)
 			printinorder(node->right);
 	}
